@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test GitHub Pages</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #131112; color: #f5f5f5;
+         display: flex; min-height: 100vh; margin: 0; align-items: center; justify-content: center; }
+  .kotak { text-align: center; padding: 2rem; }
+  h1 { color: #E6DE00; margin: 0 0 .5rem; }
+  p { color: #bdbdbd; margin: .25rem 0; }
+  #jam { font-family: monospace; font-size: 1.25rem; color: #fff; }
+</style>
+</head>
+<body>
+  <div class="kotak">
+    <h1>GitHub Pages Aktif ✅</h1>
+    <p>Halaman statis ini berhasil dimuat.</p>
+    <p id="jam">--:--:--</p>
+  </div>
+  <script>
+    const el = document.getElementById('jam');
+    const perbarui = () => el.textContent = 'Waktu perangkatmu: ' + new Date().toLocaleTimeString('id-ID');
+    perbarui();
+    setInterval(perbarui, 1000);
+  </script>
+</body>
+</html>
